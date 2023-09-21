@@ -20,12 +20,12 @@ app.use('/api', api);
 
 // This view route is a GET route for the homepage
 app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, 'public/index.html'))
+  res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
 // This view route is a GET route for the note page
 app.get('/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, 'public/notes.html'))
+  res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
 app.listen(PORT, () =>

@@ -25,11 +25,11 @@ notes.get('/note_id', (req, res) => {
 
 // This API route is a POST Route for a new note
 notes.post('/', (req, res) => {
-  console.info(`${req.method} request received to add a note`);
+  console.log(req.body);
 
   const { title, note } = req.body;
 
-  if (title && note) {
+  if (req.body) {
     const newNote = {
       title,
       note,
